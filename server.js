@@ -1,19 +1,7 @@
-const http = require('http');
+const app = require('./src/config/custom-express');
 
-const server = http.createServer((req,res) => {
-    res.end(`
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
-    </head>
-    <body>
-        <p>Olar Mundo</p>
-    </body>
-    </html>
-    `)
+const port = 3000
+app.listen(port, () => {
+    console.log('Servidor rodando na porta: ' + port);
 });
-server.listen(3000);
+
